@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request, redirect
 from helper import preprocessing, vectorizer, get_prediction
 from logger import logging
+ 
 
 app = Flask(__name__)
 
@@ -10,6 +11,7 @@ data = dict()
 reviews = []
 positive = 0
 negative = 0
+
 
 @app.route("/")
 def index():
@@ -47,3 +49,4 @@ def my_post():
 
 if __name__ == "__main__":
     app.run()
+
